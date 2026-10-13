@@ -27,7 +27,11 @@ int main(int argc, char **argv) {
 	<< duration_cast<hours>(time) << ' '
 	<< duration_cast<minutes>(time % 1h) << ' '
 	<< duration_cast<seconds>(time % 1min) << ' '
-	<< duration_cast<microseconds>(time % 1s) << "\nCheck sort... ";
+	<< duration_cast<microseconds>(time % 1s) << endl;
+	#ifdef ITERCOUNT
+	cout << "Iterations: " << itercnt << endl;
+	#endif
+	cout << "Check sort... ";
 	if (is_sorted(a, a + n)) return cout << "Array is sorted!", 0;
 	return cout << "Array is NOT sorted!\n\n\nNOT SORTEEEEEEEEEEEEED!!!!!!!!!!\n", 1;
 }

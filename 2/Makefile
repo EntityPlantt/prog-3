@@ -6,3 +6,4 @@ all:
 	mkdir -p $(DD)
 	$(CC) $(CFLAGS) bucket_sort.cpp test.cpp -o $(DD)/test
 	$(CC) $(CFLAGS) bucket_sort.cpp benchmark.cpp -o $(DD)/benchmark
+	$(CC) $(CFLAGS) -DITERCOUNT bucket_sort.cpp benchmark.cpp -o $(DD)/benchmark_iterations
