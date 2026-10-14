@@ -16,14 +16,3 @@ void bubblesort(int *const arr, const int n);
 // 1.4
 int bsearch(const int *const arr, const int n, const int val);
 int bsearch_rec(const int *const arr, const int n, const int val);
-
-// 1.5
-struct date {
-	// ISO8601
-	short year, month, day;
-};
-struct footballer {
-	// new tech: variable length, also assignment works! marvelous!
-	const char *name, *surname, *clubname;
-	date birthdate;
-};
